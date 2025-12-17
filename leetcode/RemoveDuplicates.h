@@ -1,0 +1,7 @@
+#ifndef PROGRAMMING_PROBLEMS_CPP_REMOVEDUPLICATES_H
+#define PROGRAMMING_PROBLEMS_CPP_REMOVEDUPLICATES_H
+#include <vector>
+
+int removeElement(std::vector<int>& nums, int val);
+
+#endif //PROGRAMMING_PROBLEMS_CPP_REMOVEDUPLICATES_H

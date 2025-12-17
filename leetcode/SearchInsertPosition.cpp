@@ -1,25 +1,12 @@
-#include<iostream>
 #include<vector>
+#include "SearchInsertPosition.h"
 
 using namespace std;
 
-typedef struct Test {
-  const vector<int> nums;
-  const int target;
-  const int exp;
-} Test;
-
-const Test tests[] = {
-  {vector<int>{1,3,5,6}, 5, 2},
-  {vector<int>{1,3,5,6}, 2, 1},
-  {vector<int>{1,3,5,6}, 7, 4},
-};
-
 int searchInsert(const vector<int>& nums, const int target) {
-  int i = 0, j = nums.size();
+  int i = 0, j = static_cast<int>(nums.size());
   while (i < j) {
-    int mid = (i + j) / 2;
-    if (nums[mid] == target) {
+    if (const int mid = (i + j) / 2; nums[mid] == target) {
       return mid;
     } else if (nums[mid] < target) {
       i = mid + 1;
@@ -28,18 +15,4 @@ int searchInsert(const vector<int>& nums, const int target) {
     }
   }
   return i;
-}
-
-int main() {
-  cout << "Running..." << endl;
-  for (const Test& test : tests) {
-    const auto res = searchInsert(test.nums, test.target);
-    if (res == test.exp) {
-      cout << "Success" << endl;
-    } else {
-      cout << "Failure: "
-        << res << " != " << test.exp << endl;
-    }
-  }
-  return 0;
 }
