@@ -1,0 +1,10 @@
+#ifndef PROGRAMMING_PROBLEMS_CPP_REVERSELINKEDLIST_H
+#define PROGRAMMING_PROBLEMS_CPP_REVERSELINKEDLIST_H
+#include "util.h"
+
+class Solution {
+public:
+  ListNode *reverseList(ListNode *head);
+};
+
+#endif //PROGRAMMING_PROBLEMS_CPP_REVERSELINKEDLIST_H
